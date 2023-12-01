@@ -21,29 +21,25 @@ This project focuses on real-time driver drowsiness detection using a Convolutio
 
 ## Usage
 1. Run the main script: `python main.py`
-2. Integrate the drowsiness detection model into your application using the provided API.
 
 ## Dataset
-The model was trained on the [Driver Drowsiness Detection Dataset](link-to-dataset).
+The model was trained on the [Driver Drowsiness Detection Dataset].
 
 ## Model Architecture
-The CNN model architecture consists of X layers with Y hyperparameters.
+The CNN model architecture consists of 3 layers with 502300 hyperparameters.
 
 ## Training Process
 1. Data preprocessing steps included [...].
-2. Model was trained for Z epochs.
+2. Model was trained for 64 epochs.
 3. Additional details in `docs/training_process.md`.
 
 ## Website
 Visit our [website](https://yourwebsite.com) for a user-friendly interface to test the drowsiness detection model.
 
 ## Results
-- Model Accuracy: X%
+- Model Accuracy: 86%
 - Precision: Y%
 - Recall: Z%
-
-## Demo
-See a live demo of the project [here](https://yourdemo.com).
 
 ## Contributing
 We welcome contributions! Follow our [contribution guidelines](CONTRIBUTING.md) to get started.
@@ -56,7 +52,7 @@ This project is licensed under the [MIT License](LICENSE).
 - Credits to the creators of the [dataset](link-to-dataset).
 
 ## Contact Information
-For questions or support, contact us at your.email@example.com.
+For questions or support, contact us at venkatyalamanchili56@gmail.com.
 
 ## Changelog
 See the [CHANGELOG.md](CHANGELOG.md) for details on project updates.
