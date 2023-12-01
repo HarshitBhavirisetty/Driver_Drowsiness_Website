@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drowsiness Detection</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("AI-based-Driver-Monitoring-System.webp") no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 100px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drowsiness Detection</h1>
+    <button onclick="runDetection()">Start Drowsiness Detection</button>
+    <button onclick="stopDetection()">Stop Drowsiness Detection</button>
+
+
+    <script>
+        function runDetection() {
+            fetch('/run_detection')
+                .then(response => response.text())
+                .then(message => alert(message));
+        }
+    </script>
+
+    <!-- Add these lines to include SocketIO -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+<script>
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+    function runDetection() {
+        socket.emit('start_detection');
+    }
+
+    socket.on('detection_started', function(data) {
+        alert(data.message);
+    });
+</script>
+<script>
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+    function runDetection() {
+        socket.emit('start_detection');
+    }
+
+    function stopDetection() {
+        socket.emit('stop_detection');
+    }
+
+    socket.on('detection_started', function(data) {
+        alert(data.message);
+    });
+
+    socket.on('detection_stopped', function(data) {
+        alert(data.message);
+    });
+</script>
+</body>
+</html>
