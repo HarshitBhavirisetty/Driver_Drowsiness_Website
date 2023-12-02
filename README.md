@@ -38,8 +38,8 @@ Visit our [website](https://yourwebsite.com) for a user-friendly interface to te
 
 ## Results
 - Model Accuracy: 86%
-- Precision: Y%
-- Recall: Z%
+- Precision: 82%
+- Recall: 84%
 
 ## Contributing
 We welcome contributions! Follow our [contribution guidelines](CONTRIBUTING.md) to get started.
