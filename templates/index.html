@@ -24,8 +24,9 @@
         }
 
         h1 {
-            margin-top: 100px;
-            font-size: 80px;
+            margin-top: 30px;
+            font-size: 70px;
+            margin-bottom: 20px;
         }
 
         img {
@@ -35,15 +36,17 @@
         }
 
         button {
-            margin-top: 50px;
+            margin-top: 30px;
+            margin-bottom: 20px;
             padding: 15px 30px;
-            font-size: 18px;
+            font-size: 25px;
             background-color: #4CAF50;
             color: #fff;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+
         }
 
         button:hover {
@@ -53,12 +56,23 @@
         p{
             color: #45a049;
             font-size: 25px;
+            font-weight: bold;
         }
+
+        .tenor-gif-embed{
+            margin-left: 300px;
+            margin-bottom: -30px;
+            clip-path: inset(5% 0 15% 0)
+            
+        }
+
+
     </style>
 </head>
 <body>
     <h1>Drowsiness Detection</h1>
     <p>Stay Awake, Stay Alive: Let Our Model Be Your Guardian on the Road!</p>
+    <div class="tenor-gif-embed" data-postid="22960854" data-share-method="host" data-aspect-ratio="2.03822" data-width="60%"><a href="https://tenor.com/view/face-gif-22960854">Face GIF</a>from <a href="https://tenor.com/search/face-gifs">Face GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
     <button class="box1" onclick="runDetection()">Start Drowsiness Detection</button>
     <button class="box2" onclick="stopDetection()">Stop Drowsiness Detection</button>
 
@@ -70,7 +84,7 @@
         }
     </script>
 
-    <!-- Add these lines to include SocketIO -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
     <script>
         var socket = io.connect('http://' + document.domain + ':' + location.port);

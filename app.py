@@ -17,7 +17,7 @@ def start_detection():
     global detection_process
 
     # Run your Python model script here
-    detection_process = subprocess.Popen(["python", "Driver Drowsiness Detection/Drowsiness_Detection.py"])
+    detection_process = subprocess.Popen(["python", "C:/Users/91630/OneDrive/Desktop/Driver_Drowsiness_Website/Driver Drowsiness Detection/Drowsiness_Detection.py"])
     # No need to emit a message here
 
 @socketio.on('stop_detection')
